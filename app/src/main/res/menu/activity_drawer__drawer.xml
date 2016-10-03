@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black"
+            android:checked="true"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_teacher_profile"
+            android:icon="@drawable/ic_teacher_black"
+            android:title="Teacher Profile"
+            />
+        <item
+            android:id="@+id/nav_add_student"
+            android:icon="@drawable/ic_stud_add_black"
+            android:title="Add Student" />
+        <item
+            android:id="@+id/nav_report"
+            android:icon="@drawable/ic_assessment_black_24dp"
+            android:title="Report" />
+        <item
+            android:id="@+id/nav_subject"
+            android:icon="@drawable/ic_book_contacts_black_24dp"
+            android:title="Subjects" />
+        <item
+            android:id="@+id/nav_help"
+            android:icon="@drawable/ic_help_black"
+            android:title="Help" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/ic_settings_power_black"
+            android:title="Logoout" />
+
+    </group>
+
+
+
+
+</menu>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.infogird.www.presenza">
+
+    <meta-data
+        android:name="AA_DB_NAME"
+        android:value="Presenza.db" />
+    <meta-data
+        android:name="AA_DB_VERSION"
+        android:value="1" />
+    <meta-data
+        android:name="AA_MODELS"
+        android:value="com.infogird.www.presenza.Student_Table" />
+
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".Teacher_SignUp_Activity" />
+        <activity android:name=".Add_Students_Step1_Activity" />
+        <activity android:name=".Add_Student_Activity_Step2" />
+        <activity
+            android:name=".Drawer_Activity"
+            android:label="@string/title_activity_drawer_"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".Take_Attendence_Activity" />
+        <activity android:name=".Add_Subject_Activity" />
+        <activity android:name=".GenerateReport" />
+    </application>
+
+</manifest>
