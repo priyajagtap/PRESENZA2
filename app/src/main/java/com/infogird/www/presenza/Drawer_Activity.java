@@ -213,7 +213,7 @@ public class Drawer_Activity extends AppCompatActivity
             startActivity(int_home);
 
         } else if (id == R.id.nav_teacher_profile) {
-            Intent int_teacher_profile = new Intent(this,Drawer_Activity.class);
+            Intent int_teacher_profile = new Intent(this,Teacher_Profile.class);
             this.finish();
             startActivity(int_teacher_profile);
 

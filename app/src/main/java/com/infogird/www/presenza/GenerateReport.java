@@ -52,6 +52,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Time;
+import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -61,6 +63,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
+import java.util.TimeZone;
 import java.util.TreeMap;
 
 import Data_Model.Attendance_Data;
@@ -86,6 +89,8 @@ public class GenerateReport extends AppCompatActivity {
     //New Workbook
     Workbook wb = new HSSFWorkbook();
     Cell c = null;
+    Date last_sync_date = new Date();
+    static String last_sync_time;
 
     //Cell style for header row
     CellStyle cs = wb.createCellStyle();
@@ -710,6 +715,7 @@ public class GenerateReport extends AppCompatActivity {
         Attendance_Data st = new Attendance_Data();
 
         String Query_select = "select * from Attendence_Details";
+        Log.i("Log",Query_select);
         crsr = sqlcon.selectQuery(Query_select);
 
         if(crsr != null) {
@@ -763,6 +769,7 @@ public class GenerateReport extends AppCompatActivity {
 
             if(temp == "1"){
                 Log.i("Res_ponse Result",temp);
+                //getDate_Time();
             }
             else{
                 Log.i("Res_ponse Result",temp);
@@ -773,5 +780,33 @@ public class GenerateReport extends AppCompatActivity {
             Log.i("Res_ponse exception",e.toString());
 
         }
+
+    }
+
+    public void getDate_Time(){
+
+        Calendar c = Calendar.getInstance();
+        System.out.println("Current time => " + c.getTime());
+
+        SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
+        Date formattedDate = new Date();
+
+        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+
+        try {
+            last_sync_date = dateFormat.parse(df.format(formattedDate));
+            //  end_convertedDate = dateFormat.parse(Output.getText().toString());
+            Log.i("last_sync_date",last_sync_date+"");
+        } catch (ParseException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+
+        Calendar cal = Calendar.getInstance(TimeZone.getTimeZone("GMT+1:00"));
+        Date currentLocalTime = cal.getTime();
+        DateFormat date = new SimpleDateFormat("HH:mm a");
+        date.setTimeZone(TimeZone.getTimeZone("GMT+1:00"));
+        last_sync_time = date.format(currentLocalTime);
+        Log.i("last_sync_time",last_sync_time+"");
     }
 }

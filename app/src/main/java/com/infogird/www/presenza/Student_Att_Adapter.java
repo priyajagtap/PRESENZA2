@@ -162,7 +162,7 @@ public class Student_Att_Adapter extends RecyclerView.Adapter<Student_Att_Adapte
                             "' AND Sub_Name ='" + subname +
                             "' AND Date ='" + new_date +
                             "' AND Time ='" + localTime +
-                            "' AND Attendence = 'A'" +
+                            "' AND Attendence = 'P'" +
                             " AND Stud_Name ='" + Stud_name_data +
                             "' AND Stud_Roll_No ='" + Integer.parseInt(stud_rollno_data)+"'";
 
