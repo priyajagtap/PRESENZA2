@@ -12,6 +12,7 @@ import android.support.v4.app.ActivityCompat;
 import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.text.Html;
 import android.text.format.Time;
 import android.util.Log;
 import android.view.View;
@@ -27,6 +28,9 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+
+import Data_Model.SessionManagement;
 
 
 public class Drawer_Activity extends AppCompatActivity
@@ -41,6 +45,12 @@ public class Drawer_Activity extends AppCompatActivity
     static View.OnClickListener myOnClickListener;
     FloatingActionButton fab_add_sub;
     Button take_att;
+
+    TextView tuid,tname,tdept,tpost;
+
+    // Session Manager Class
+    SessionManagement session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,6 +78,32 @@ public class Drawer_Activity extends AppCompatActivity
         });
 */
         fab_add_sub = (FloatingActionButton)findViewById(R.id.fab);
+        tuid = (TextView)findViewById(R.id.uid_tv);
+        tname = (TextView)findViewById(R.id.name_tv);
+        tdept = (TextView)findViewById(R.id.dept_tv);
+        tpost = (TextView)findViewById(R.id.post_tv);
+        // Session class instance
+        session = new SessionManagement(getApplicationContext());
+
+        session.checkLogin();
+
+        // get user data from session
+        HashMap<String, String> user = session.getUserDetails();
+
+        // name
+        String uid_t = user.get(SessionManagement.KEY_UID);
+        // email
+        String name_t = user.get(SessionManagement.KEY_NAME);
+        // dept
+        String dept_t = user.get(SessionManagement.KEY_DEPT);
+        // post
+        String post_t = user.get(SessionManagement.KEY_POST);
+
+        // displaying user data
+        tuid.setText(Html.fromHtml("Name: <b>" + uid_t + "</b>"));
+        tname.setText(Html.fromHtml("Email: <b>" + name_t + "</b>"));
+        tdept.setText(Html.fromHtml("Name: <b>" + dept_t + "</b>"));
+        tpost.setText(Html.fromHtml("Email: <b>" + post_t + "</b>"));
 
         fab_add_sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -238,10 +274,10 @@ public class Drawer_Activity extends AppCompatActivity
             startActivity(int_help);
 
         }else if (id == R.id.nav_logout) {
-            Intent int_logout = new Intent(this,Drawer_Activity.class);
-            this.finish();
-            startActivity(int_logout);
-
+            // Clear the session data
+            // This will clear all session data and
+            // redirect user to LoginActivity
+            session.logoutUser();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
