@@ -35,7 +35,9 @@
         <activity
             android:name=".Drawer_Activity"
             android:label="@string/title_activity_drawer_"
-            android:theme="@style/AppTheme.NoActionBar" />
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity >
         <activity android:name=".Take_Attendence_Activity" />
         <activity android:name=".Add_Subject_Activity" />
         <activity android:name=".GenerateReport" />

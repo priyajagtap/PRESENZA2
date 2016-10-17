@@ -49,7 +49,7 @@ public class Drawer_Activity extends AppCompatActivity
     TextView tuid,tname,tdept,tpost;
 
     // Session Manager Class
-    SessionManagement session;
+   // SessionManagement session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -83,27 +83,27 @@ public class Drawer_Activity extends AppCompatActivity
         tdept = (TextView)findViewById(R.id.dept_tv);
         tpost = (TextView)findViewById(R.id.post_tv);
         // Session class instance
-        session = new SessionManagement(getApplicationContext());
+      //  session = new SessionManagement(getApplicationContext());
 
-        session.checkLogin();
+      //  session.checkLogin();
 
         // get user data from session
-        HashMap<String, String> user = session.getUserDetails();
+      //  HashMap<String, String> user = session.getUserDetails();
 
         // name
-        String uid_t = user.get(SessionManagement.KEY_UID);
+      //  String uid_t = user.get(SessionManagement.KEY_UID);
         // email
-        String name_t = user.get(SessionManagement.KEY_NAME);
+      //  String name_t = user.get(SessionManagement.KEY_NAME);
         // dept
-        String dept_t = user.get(SessionManagement.KEY_DEPT);
+      //  String dept_t = user.get(SessionManagement.KEY_DEPT);
         // post
-        String post_t = user.get(SessionManagement.KEY_POST);
+      //  String post_t = user.get(SessionManagement.KEY_POST);
 
         // displaying user data
-        tuid.setText(Html.fromHtml("Name: <b>" + uid_t + "</b>"));
-        tname.setText(Html.fromHtml("Email: <b>" + name_t + "</b>"));
-        tdept.setText(Html.fromHtml("Name: <b>" + dept_t + "</b>"));
-        tpost.setText(Html.fromHtml("Email: <b>" + post_t + "</b>"));
+       // tuid.setText(Html.fromHtml("Name: <b>" + uid_t + "</b>"));
+      //  tname.setText(Html.fromHtml("Email: <b>" + name_t + "</b>"));
+      //  tdept.setText(Html.fromHtml("Dept: <b>" + dept_t + "</b>"));
+      //  tpost.setText(Html.fromHtml("Post: <b>" + post_t + "</b>"));
 
         fab_add_sub.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -277,7 +277,7 @@ public class Drawer_Activity extends AppCompatActivity
             // Clear the session data
             // This will clear all session data and
             // redirect user to LoginActivity
-            session.logoutUser();
+          //  session.logoutUser();
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

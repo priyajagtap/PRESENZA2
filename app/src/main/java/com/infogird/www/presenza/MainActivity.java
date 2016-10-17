@@ -73,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         METHOD_NAME = sc.getMETHOD_NAME();
         SOAP_ACTION = sc.getSOAP_ACTION();
 
+        sc_sp = new server_conf();
         sc_sp.setMETHOD_NAME("Show_Teacher_Profile_Operation");
         METHOD_NAME_SP = sc_sp.getMETHOD_NAME();
         SOAP_ACTION_SP = sc_sp.getSOAP_ACTION();
