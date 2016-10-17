@@ -25,7 +25,6 @@ public class server_conf {
         this.METHOD_NAME = METHOD_NAME;
         this.SOAP_ACTION = this.NAMESPACE+this.METHOD_NAME;
     }
-
     public String getSOAP_ACTION() {
         return SOAP_ACTION;
     }

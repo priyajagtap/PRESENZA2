@@ -44,7 +44,7 @@ public class Teacher_Profile extends AppCompatActivity {
         tv_tname = (TextView)findViewById(R.id.tv_t_name);
         tv_t_dept = (TextView)findViewById(R.id.tv_t_dept);
         tv_t_post =(TextView)findViewById(R.id.tv_t_post);
-        btn_edit_profile = (Button)findViewById(R.id.btn_edit_profile);
+      //  btn_edit_profile = (Button)findViewById(R.id.btn_edit_profile);
 
         sc = new server_conf();
         NAMESPACE = sc.getNAMESPACE();

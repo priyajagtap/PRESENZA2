@@ -25,14 +25,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Teacher ID"
             android:id="@+id/tv_t_uid"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="#131314"
-            android:textSize="30sp"
             android:background="@drawable/tv_shape"
             android:shadowColor="#A8652A"
             android:shadowDx="0"
@@ -42,14 +41,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Teacher Name"
             android:id="@+id/tv_t_name"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="#131314"
-            android:textSize="30sp"
             android:background="@drawable/tv_shape"
             android:shadowColor="#A8652A"
             android:shadowDx="0"
@@ -59,14 +57,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Teacher Dept"
             android:id="@+id/tv_t_dept"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="#131314"
-            android:textSize="30sp"
             android:background="@drawable/tv_shape"
             android:shadowColor="#A8652A"
             android:shadowDx="0"
@@ -76,14 +73,13 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Teacher Post"
             android:id="@+id/tv_t_post"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="#131314"
-            android:textSize="30sp"
             android:background="@drawable/tv_shape"
             android:shadowColor="#A8652A"
             android:shadowDx="0"
@@ -91,21 +87,20 @@
             android:shadowRadius="5"
             android:layout_marginTop="10dp"/>
 
-        <Button
+   <!--     <Button
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="30dp"
             android:text="Edit Profile"
             android:id="@+id/btn_edit_profile"
             android:layout_gravity="center_horizontal"
             android:gravity="center"
             android:textColor="#131314"
-            android:textSize="30sp"
             android:background="@drawable/buttonshape"
             android:shadowColor="#A8652A"
             android:shadowDx="0"
             android:shadowDy="0"
             android:shadowRadius="5"
-            android:layout_marginTop="10dp"/>
+            android:layout_marginTop="10dp"/>-->
 
     </LinearLayout>
 </RelativeLayout>

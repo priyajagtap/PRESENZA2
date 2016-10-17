@@ -274,6 +274,7 @@ public class Drawer_Activity extends AppCompatActivity
             startActivity(int_help);
 
         }else if (id == R.id.nav_logout) {
+            finish();
             // Clear the session data
             // This will clear all session data and
             // redirect user to LoginActivity
